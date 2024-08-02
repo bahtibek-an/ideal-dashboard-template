@@ -10,7 +10,6 @@
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js"></script>
 </head>
-</head>
 <body class="p-5 bg-white dark:bg-gray-900 antialiased !p-0">
 
 <button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar"
@@ -131,9 +130,15 @@
                 </h3>
 
                 <div id="images" class="flex gap-4 flex-wrap mt-4">
-
+                    <form class="image__form" action="">
+                        <input name="image" value="https://i.natgeofe.com/n/135b255f-f37f-4b23-b0c3-2f0a4c1aa065/1106.jpg?w=2560&h=1922">
+                    </form>
+                    <form class="image__form" action="">
+                        <input name="image" value="https://i.natgeofe.com/n/135b255f-f37f-4b23-b0c3-2f0a4c1aa065/1106.jpg?w=2560&h=1922">
+                    </form>
                 </div>
                 <button type="button"
+                        id="image__btn"
                         onclick="addImageField()"
                         class="mt-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                     Добавить изображение
@@ -147,10 +152,25 @@
                     Краткое описание с изображением
                 </h3>
                 <div id="descriptions" class="flex gap-4 flex-wrap">
+                    <form class="description__form" action="/submit-url-1">
+                        <input name="description_ru" class="hidden" value="name_ru"/>
+                        <input name="description_uz" class="hidden" value="name_uz"/>
+                        <input name="description_id" class="hidden" value="1">
+                        <input name="description_image" class="hidden"
+                               value="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg/1920px-Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg"/>
+                    </form>
+                    <form class="description__form" action="/submit-url-1">
+                        <input name="description_ru" class="hidden" value="name_ru1"/>
+                        <input name="description_uz" class="hidden" value="name_uz1"/>
+                        <input name="description_id" class="hidden" value="1">
+                        <input name="description_image" class="hidden"
+                               value="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg/1920px-Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg"/>
+                    </form>
                 </div>
                 <button type="button"
+                        id="description__btn"
                         onclick="addDescriptionField()"
-                        class="mt-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                        class="mt-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2  focus:outline-none dark:focus:ring-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700">
                     Добавить описание с изображением
                 </button>
             </div>
@@ -163,10 +183,26 @@
                 </h3>
 
                 <div id="variation" class="mt-4">
-
+                    <form class="variation__form" action="/">
+                        <input name="name_ru" value="variation name ru">
+                        <input name="name_uz" value="variation name uz">
+                        <input name="variation_id" value="2">
+                        <input type="color" name="variation_color" value="#ffffff">
+                        <input name="variation_image"
+                               value="https://i.natgeofe.com/n/135b255f-f37f-4b23-b0c3-2f0a4c1aa065/1106.jpg?w=2560&h=1922">
+                    </form>
+                    <form class="variation__form" action="/">
+                        <input name="name_ru" value="variation name ru">
+                        <input name="name_uz" value="variation name uz">
+                        <input name="variation_id" value="2">
+                        <input type="color" name="variation_color" value="#ffffff">
+                        <input name="variation_image"
+                               value="https://i.natgeofe.com/n/135b255f-f37f-4b23-b0c3-2f0a4c1aa065/1106.jpg?w=2560&h=1922">
+                    </form>
                 </div>
 
                 <button type="button"
+                        id="variation__btn"
                         onclick="addVariationField()"
                         class="mt-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                     Добавить вариацию
@@ -179,11 +215,16 @@
                 <h3>Характеристики</h3>
 
                 <div id="characteristics" class="mt-4">
-
+                    <form class="characteristic__form" action="/">
+                        <input name="characteristic_id" value="1">
+                        <input name="feature_id" value="US">
+                        <input name="feature_name" value="feature name">
+                    </form>
                 </div>
 
                 <button type="button"
                         onclick="addFeatureField()"
+                        id="features__btn"
                         class="mt-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                     Добавить характеристики
                 </button>
@@ -205,6 +246,7 @@
     const ADD_FORM = 'ADD_FORM';
     const ADD_VARIATION_FORM = "ADD_VARIATION_FORM";
     const ADD_FEATURE_FORM = "RENDER_FEATURE_FORM";
+    const ADD_IMAGE_FORM = "ADD_IMAGE_FORM";
     const SET_FORM_DATA = 'SET_FORM_DATA';
     const SET_FORM_IS_EDITING = "SET_FORM_IS_EDITING";
     const REMOVE_FORM = "REMOVE_FORM";
@@ -212,11 +254,36 @@
     const addForm = () => ({type: ADD_FORM});
     const addVariationForm = () => ({type: ADD_VARIATION_FORM});
     const addFeatureForm = () => ({type: ADD_FEATURE_FORM});
+    const addImageForm = () => ({type: ADD_IMAGE_FORM});
+
     const setFormData = (id, formData, formType) => ({type: SET_FORM_DATA, payload: {id, formData, formType}});
     const setFormIsEditing = (id, formType) => ({type: SET_FORM_IS_EDITING, payload: {id, formType}});
     const removeForm = (id, formType) => ({type: REMOVE_FORM, payload: {id, formType}});
 
-    const initialState = {descriptionForm: [], variations: [], features: []};
+    const getInitialStateForm = (formSelector) => {
+        const forms = document.querySelectorAll(formSelector);
+        const result = [];
+        forms.forEach((form) => {
+            const formData = new FormData(form);
+            const item = {
+                id: Date.now() + Math.floor(Math.random() * 10000),
+                data: {},
+                isEditing: false
+            }
+            for (let [name, value] of formData) {
+                item.data[name] = value || null;
+            }
+            result.push(item);
+        })
+        return result;
+    }
+
+    const initialState = {
+        descriptionForm: getInitialStateForm(".description__form"),
+        variations: getInitialStateForm(".variation__form"),
+        features: getInitialStateForm(".characteristic__form"),
+        images: getInitialStateForm(".image__form")
+    };
 
     function formReducer(state = initialState, action) {
         switch (action.type) {
@@ -259,6 +326,17 @@
                         isEditing: true
                     }]
                 }
+            case ADD_IMAGE_FORM:
+                return {
+                    ...state,
+                    images: [...state.images, {
+                        id: Date.now(),
+                        data: {
+                            image: null,
+                        },
+                        isEditing: true
+                    }]
+                };
             case SET_FORM_DATA:
                 return {
                     ...state,
@@ -289,15 +367,35 @@
     store.subscribe(renderForms);
 
     const addDescriptionField = () => {
+        const state = store.getState();
+        if (state.descriptionForm.find(item => item.isEditing === true)) {
+            return;
+        }
         store.dispatch(addForm());
     }
 
     const addVariationField = () => {
+        const state = store.getState();
+        if (state.variations.find(item => item.isEditing === true)) {
+            return;
+        }
         store.dispatch(addVariationForm());
     }
 
     const addFeatureField = () => {
+        const state = store.getState();
+        if (state.features.find(item => item.isEditing === true)) {
+            return;
+        }
         store.dispatch(addFeatureForm());
+    }
+
+    const addImageField = () => {
+        const state = store.getState();
+        if (state.features.find(item => item.image == null)) {
+            return;
+        }
+        store.dispatch(addImageForm());
     }
 
     const handleChange = (id, event, formType) => {
@@ -322,9 +420,12 @@
         return URL.createObjectURL(file);
     }
 
-    const applyChanges = (id, formType, isAllFieldsFilled) => {
+    const applyChanges = (id, formType, isAllFieldsFilled, parentElement) => {
         if (!isAllFieldsFilled) {
             return;
+        }
+        if (parentElement) {
+            sendData(parentElement);
         }
         store.dispatch(setFormIsEditing(id, formType));
     }
@@ -402,7 +503,7 @@
                 <button
                     type="button"
                     class="apply-button focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ${btnColor}"
-                    onclick="applyChanges(${formId}, 'descriptionForm', ${isAllFieldsFilled})"
+                    onclick="applyChanges(${formId}, 'descriptionForm', ${isAllFieldsFilled}, this.parentElement)"
                 >
                     Применить
                 </button>
@@ -448,7 +549,7 @@
         descriptionsDiv.innerHTML = '';
         state.descriptionForm.forEach(form => {
             const descriptionImage = form.data.description_image;
-            const formActionUrl = form.data.id ? `/url/${form.data.id}` : "/url";
+            const formActionUrl = "/url";
             const formElement = document.createElement('form');
             formElement.classList.add('w-full', 'mt-4');
 
@@ -546,7 +647,7 @@
             <button
                 type="button"
                 class="apply-button focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ${btnColor}"
-                onclick="applyChanges(${formId}, 'variations', ${isAllFieldsFilled})"
+                onclick="applyChanges(${formId}, 'variations', ${isAllFieldsFilled}, this.parentElement)"
             >
                 Применить
             </button>
@@ -619,7 +720,7 @@
         variationList.innerHTML = '';
         state.variations.forEach(form => {
             const variationImage = form.data.variation_image;
-            const formActionUrl = form.data.id ? `/url/${form.data.id}` : "/url";
+            const formActionUrl = "/url";
             const formElement = document.createElement('form');
             formElement.classList.add('w-full', 'mt-4');
 
@@ -687,10 +788,10 @@
                     class="feature_fields bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 >
                     <option selected disabled>Выберите характеристики</option>
-                    <option value="US" ${formFeatureId === "US" ? "selected": ""}>United States</option>
-                    <option value="CA" ${formFeatureId === "CA" ? "selected": ""}>Canada</option>
-                    <option value="FR" ${formFeatureId === "FR" ? "selected": ""}>France</option>
-                    <option value="DE" ${formFeatureId === "DE" ? "selected": ""}>Germany</option>
+                    <option value="US" ${formFeatureId === "US" ? "selected" : ""}>United States</option>
+                    <option value="CA" ${formFeatureId === "CA" ? "selected" : ""}>Canada</option>
+                    <option value="FR" ${formFeatureId === "FR" ? "selected" : ""}>France</option>
+                    <option value="DE" ${formFeatureId === "DE" ? "selected" : ""}>Germany</option>
                 </select>
                 <input
                     value="${formFeatureName}"
@@ -710,18 +811,59 @@
             <button
                 type="button"
                 class="apply-button focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ${btnColor}"
-                onclick="applyChanges(${formId}, 'features', ${isAllFieldsFilled})"
+                onclick="applyChanges(${formId}, 'features', ${isAllFieldsFilled}, this.parentElement)"
             >
                 Применить
             </button>
         `;
     }
 
+    const getEditImagesField = (formId, image) => {
+        return `
+            <div class="w-full max-w-96" style="height: 250px;max-width: 400px;">
+                <label for="image_${formId}">
+                    <img class="w-full h-full object-cover cursor-pointer" src="${image}" id="image-${formId}" alt="image"/>
+                </label>
+                <input
+                    name="image"
+                    class="images hidden"
+                    id="image_${formId}"
+                    type="file"
+                    onchange="handleImageChange(${formId}, event, 'images')"
+                />
+            </div>
+            <button
+                type="button"
+                onclick="deleteFormById(${formId}, 'images')"
+                class="mt-4 focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+            >
+                Удалить
+            </button>
+        `
+    }
+
+    const renderImagesForms = (state) => {
+        const imageList = document.getElementById('images');
+        imageList.innerHTML = '';
+        state.images.forEach(form => {
+            const image = form.data.image;
+            const formActionUrl = "/url";
+            const formElement = document.createElement('form');
+            formElement.classList.add('w-full', 'mt-4');
+
+            formElement.method = 'POST';
+            formElement.action = formActionUrl;
+            const imageUrl = getBase64FromImageFile(image);
+            formElement.innerHTML = getEditImagesField(form.id, imageUrl);
+            imageList.appendChild(formElement);
+        });
+    }
+
     function renderFeatureForms(state) {
         const featuresList = document.getElementById('characteristics');
         featuresList.innerHTML = '';
         state.features.forEach(form => {
-            const formActionUrl = form.data.id ? `/url/${form.data.id}` : "/url";
+            const formActionUrl = "/url";
             const formElement = document.createElement('form');
             formElement.classList.add('w-full', 'mt-4');
 
@@ -737,59 +879,60 @@
         });
     }
 
+    function checkForFieldsFilled(state) {
+        const descriptionBtn = document.getElementById("description__btn");
+        const featuresBtn = document.getElementById("features__btn");
+        const variationBtn = document.getElementById("variation__btn");
+        const imageBtn = document.getElementById("image__btn");
+
+        if (!state.descriptionForm.find(item => item.isEditing === true)) {
+            descriptionBtn.classList.add("dark:bg-blue-600", "dark:hover:bg-blue-700")
+            descriptionBtn.classList.remove("dark:bg-gray-600");
+        } else {
+            descriptionBtn.classList.remove("dark:bg-blue-600", "dark:hover:bg-blue-700");
+            descriptionBtn.classList.add("dark:bg-gray-600");
+        }
+
+        if (!state.features.find(item => item.isEditing === true)) {
+            featuresBtn.classList.add("dark:bg-blue-600", "dark:hover:bg-blue-700")
+            featuresBtn.classList.remove("dark:bg-gray-600");
+        } else {
+            featuresBtn.classList.remove("dark:bg-blue-600", "dark:hover:bg-blue-700");
+            featuresBtn.classList.add("dark:bg-gray-600");
+        }
+
+        if (!state.variations.find(item => item.isEditing === true)) {
+            variationBtn.classList.add("dark:bg-blue-600", "dark:hover:bg-blue-700")
+            variationBtn.classList.remove("dark:bg-gray-600");
+        } else {
+            variationBtn.classList.remove("dark:bg-blue-600", "dark:hover:bg-blue-700");
+            variationBtn.classList.add("dark:bg-gray-600");
+        }
+        if (!state.images.find(item => item.data.image == null)) {
+            imageBtn.classList.add("dark:bg-blue-600", "dark:hover:bg-blue-700")
+            imageBtn.classList.remove("dark:bg-gray-600");
+        } else {
+            imageBtn.classList.remove("dark:bg-blue-600", "dark:hover:bg-blue-700");
+            imageBtn.classList.add("dark:bg-gray-600");
+        }
+
+    }
+
     function renderForms() {
         const state = store.getState();
         renderDescriptionForms(state);
         renderVariationForms(state);
         renderFeatureForms(state);
+        checkForFieldsFilled(state);
+        renderImagesForms(state);
     }
 
-    function addImageField() {
-        const container = document.createElement('form');
-        const uniqueId = `file-${Math.random().toString(36).substr(2, 9)}`;
+    renderForms();
 
-        container.action = "/123";
-        container.method = "POST";
+    function sendData(form) {
+        const formData = new FormData(form);
 
-        container.innerHTML = `
-            <div class="w-full max-w-96" style="height: 250px;max-width: 400px;">
-                <label for="${uniqueId}">
-                    <img class="w-full h-full object-cover cursor-pointer" src="./assets/default-input-image.jpg" id="image-${uniqueId}" alt="image"/>
-                </label>
-                <input name="image" class="images hidden" id="${uniqueId}" type="file" onchange="previewImage(this, '${uniqueId}')"/>
-            </div>
-            <button
-                type="button"
-                onclick="this.parentElement.remove()"
-                class="mt-4 focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-            >
-                Удалить
-            </button>
-        `;
-        document.getElementById('images').appendChild(container);
-    }
-
-    document.body.addEventListener('blur', function (event) {
-        if ((event.target.tagName === 'INPUT' && event.target.type !== 'file') || event.target.tagName === 'TEXTAREA' || event.target.tagName === 'SELECT') {
-            sendData(event.target);
-        }
-    }, true);
-
-    document.body.addEventListener('change', function (event) {
-        if (event.target.type === 'file' || event.target.tagName === 'SELECT') {
-            sendData(event.target);
-        }
-    });
-
-    function sendData(element) {
-        const formData = new FormData();
-        if (element.type === 'file' && element.files.length > 0) {
-            formData.append(element.name, element.files[0]);
-        } else {
-            formData.append(element.name, element.value);
-        }
-
-        fetch(element.form.action, {
+        fetch(form.action, {
             method: 'POST',
             body: formData
         }).then(response => response.json())
