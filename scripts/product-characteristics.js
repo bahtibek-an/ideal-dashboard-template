@@ -148,7 +148,8 @@ const addFeatureField = () => {
 
 const addImageField = () => {
     const state = store.getState();
-    if (state.features.find(item => item.image == null)) {
+    console.log(state.images.find(item => item.data.image == null))
+    if (state.images.find(item => item.data.image == null)) {
         return;
     }
     store.dispatch(addImageForm());
