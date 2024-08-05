@@ -577,7 +577,7 @@ const getEditFeatureField = (
 const getEditImagesField = (formId, image) => {
     return `
             <div class="w-full max-w-96" style="height: 250px;max-width: 400px;">
-                <label for="image_${formId}">
+                <label class="w-full block h-full"  for="image_${formId}">
                     <img class="w-full h-full object-cover cursor-pointer" src="${image}" id="image-${formId}" alt="image"/>
                 </label>
                 <input
@@ -591,7 +591,7 @@ const getEditImagesField = (formId, image) => {
             <button
                 type="button"
                 onclick="deleteFormById(${formId}, 'images')"
-                class="mt-4 focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                class="block mt-4 focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
             >
                 Удалить
             </button>
@@ -605,7 +605,7 @@ const renderImagesForms = (state) => {
         const image = form.data.image;
         const formActionUrl = "/url";
         const formElement = document.createElement('form');
-        formElement.classList.add('w-full', 'mt-4');
+        formElement.classList.add('mt-4');
 
         formElement.method = 'POST';
         formElement.action = formActionUrl;
