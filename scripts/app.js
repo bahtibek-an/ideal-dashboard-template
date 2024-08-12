@@ -1,6 +1,6 @@
 function updateImagePreview(fileInputName, previewImageName) {
-    var fileInput = document.getElementById(fileInputName);
-    var previewImage = document.getElementById(previewImageName);
+    const fileInput = document.getElementById(fileInputName);
+    const previewImage = document.getElementById(previewImageName);
     if (fileInput.files && fileInput.files[0]) {
         var reader = new FileReader();
         reader.onload = function(e) {
@@ -20,5 +20,10 @@ document.getElementById('fileInput').addEventListener('change', () => updateImag
 const externalImage = document.getElementById('external_image');
 if(externalImage) {
     externalImage.addEventListener('change', () => updateImagePreview("external_image", "external-preview__image"));
+}
+
+const heroImage = document.getElementById('hero__image');
+if(heroImage) {
+    heroImage.addEventListener('change', () => updateImagePreview("hero__image", "previewImageHero"));
 }
 
